@@ -24,3 +24,4 @@ urlpatterns = [
     path('kerby/lotto_numbers/<int:times>/', lotto_numbers),
     path('', index),
 ]
+    
