@@ -8,4 +8,4 @@ by KERBY
 
 + 장고 개발환경 세팅
 + Git/GitHub
-urlConfu
++ urlConfu
