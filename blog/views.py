@@ -16,10 +16,8 @@ def hello_times(request, times):
 
 def lotto_numbers(request):
     lotto_list = []
-    for i in range(1,6):
-        lotto_list.append(random.sample(45,6))
-        message = "<html>"Suggestion No.{} : ".format(i)</html>"
+    for i in range(1, 6):
+        lotto_list.append(random.sample(45, 6))
+        message = "<html>Suggestion No.{} : </html>".format(i)
         return HttpResponse(message)
-
-
-
+    
