@@ -29,7 +29,7 @@ urlpatterns = [
     path('articles/<year:year>/', articles_by_year),
     path('admin/', admin.site.urls),
     path('blog/hello_times/<int:times>/', hello_times),
-    path('kerby/lotto_numbers/<int:times>/', lotto_numbers),
+    path('kerby/lotto_numbers/', lotto_numbers),
     path('', index),
     # re-path(r'^&'),
 ]
