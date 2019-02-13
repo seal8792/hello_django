@@ -11,5 +11,6 @@ app_name = 'blog'
 urlpatterns = [
     path('articles/<year:year>/', articles_by_year),
     path('hello_times/<int:times>/', hello_times),
+    path('articles/<year:year>', articles_by_year),
     path('', index),
     ]
