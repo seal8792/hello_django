@@ -1,3 +1,4 @@
+import random
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -10,5 +11,15 @@ def index(request):
     return render(request, 'blog/index.html')
 
 def hello_times(request, times):
-    message = "안녕하세요" * times
+    message = "안녕하세요 " * times
     return HttpResponse(message)
+
+def lotto_numbers(request):
+    lotto_list = []
+    for i in range(1,6):
+        lotto_list.append(random.sample(45,6))
+        message = "<html>"Suggestion No.{} : ".format(i)</html>"
+        return HttpResponse(message)
+
+
+
