@@ -9,7 +9,6 @@ def articles_by_year(request, year):
 def index(request):
     return render(request, 'blog/index.html')
 
-def hello_times(request, times) :
+def hello_times(request, times):
     message = "안녕하세요" * times
     return HttpResponse(message)
-
