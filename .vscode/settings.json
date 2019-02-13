@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/Users/geniuskerby/anaconda3/bin/python"
+    "python.pythonPath": "C:\\Users\\sktl50043\\AppData\\Local\\Continuum\\anaconda3\\python.exe",
+    "python.linting.pylintArgs": [
+        "--disable", "C0111,C0301",
+        "--load-plugins", "pylint_django"
+    ],
 }
