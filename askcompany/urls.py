@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import index, hello_times
-from kerby.views import lotto_numbers
-from blog.views import articles_by_year
-
 from django.urls import register_converter
+from blog.views import index, hello_times, articles_by_year
 from blog.converters import FourDigitYearConverter
+from kerby.views import lotto_numbers
+# from blog.views import articles_by_year
+
 
 register_converter(FourDigitYearConverter, 'year')
 
