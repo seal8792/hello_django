@@ -25,6 +25,7 @@ def naver_realtime_keywords(request):
     return HttpResponse(text)
 
 def naver_blog_search(request):
+    # query = input('Word for Search? ')
     query = request.GET.get('query')
     if query:
         # text = f'(query) 검색할거야.'
@@ -53,6 +54,30 @@ def naver_blog_search(request):
     else:
         text = '검색어를 지정해 주세요.'
     return HttpResponse(text)
+
+# def fn(template_name):
+#     def inner(request):
+#         return render(request, template_name)
+#     return inner
+
+# index = fn('blog/index.html')
+
+# index2 = fn('blog/index2.html')
+
+
+# class MyTemplateView:
+#     @classmethod
+#     def as_view(self, template_name):
+#         def inner(request):
+#             return render(request, template_name)
+#         return inner
+
+# index = MyTemplateView.as_view('blog/index.html')
+
+
+from django.views.generic import TemplateView
+
+index = TemplateView.as_view(template_name='blog/index.html')
 
 def lotto_numbers(request):
     html_list = []
