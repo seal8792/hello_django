@@ -2,8 +2,8 @@
 from django.urls import path
 from django.urls import register_converter
 from blog.views import index, hello_times, articles_by_year, lotto_numbers
-from blog.converters import FourDigitYearConverter
 from blog.views import naver_realtime_keywords
+from blog.converters import FourDigitYearConverter
 
 register_converter(FourDigitYearConverter, 'year')
 

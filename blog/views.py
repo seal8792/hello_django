@@ -1,5 +1,4 @@
 import random
-import html
 import requests
 from bs4 import BeautifulSoup
 from django.shortcuts import render
@@ -33,5 +32,3 @@ def lotto_numbers(request):
         html = "<html><body>No.{} : %s </body></html>".format(i) % lotto_list
         html_list.append(html)
     return HttpResponse(html_list)
-
-
