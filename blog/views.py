@@ -28,7 +28,7 @@ def naver_blog_search(request):
     query = request.GET.get('query')
     if query:
         # text = f'(query) 검색할거야.'
-        url = "https://search.naver.com/search.naver"
+        url = 'https://search.naver.com/search.naver'
         params = {
             'where' : 'post',
             'sm' : 'tab_jum',
@@ -46,9 +46,9 @@ def naver_blog_search(request):
                 'title' : post_title,
                 'url' : post_url,
             })
-            return render(request, 'blog/naver/blog_search.html', {
-                'query' : query,
-                'post_list' : post_list,
+        return render(request, 'blog/naver_blog_search.html', {
+            'query' : query,
+            'post_list' : post_list,
             })
     else:
         text = '검색어를 지정해 주세요.'
