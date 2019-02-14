@@ -1,4 +1,7 @@
 import random
+import html
+import requests
+from bs4 import BeautifulSoup
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -14,10 +17,21 @@ def hello_times(request, times):
     message = "안녕하세요 " * times
     return HttpResponse(message)
 
-def lotto_numbers(request, numbers):
-    lotto_list = []
+def naver_realtime_keywords(request):
+    res = requests.get("http://naver.com")
+    html = res.text
+    soup = BeautifulSoup(html, 'html.parser')
+    tag_list = soup.select('.PM_CL_realtimeKeyword_rolling .ah_k')
+    text = '<br/>\n'.join([tag.text for tag in tag_list])
+    return HttpResponse(text)
+
+def lotto_numbers(request):
+    html_list = []
     for i in range(1, 6):
-        lotto_list.append(random.sample(45, 6))
-        message = "<html>Suggestion No.{} : </html>".format(i)
-        return HttpResponse(message)
+        lotto_list = random.sample(range(1, 46), 6)
+        lotto_list.sort()
+        html = "<html><body>No.{} : %s </body></html>".format(i) % lotto_list
+        html_list.append(html)
+    return HttpResponse(html_list)
+
 
