@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from django.shortcuts import render
 from django.http import HttpResponse
+# from django.views.generic import TemplateView
 
 def articles_by_year(request, year):
     return HttpResponse(f'''
@@ -74,10 +75,7 @@ def naver_blog_search(request):
 
 # index = MyTemplateView.as_view('blog/index.html')
 
-
-from django.views.generic import TemplateView
-
-index = TemplateView.as_view(template_name='blog/index.html')
+# index = TemplateView.as_view(template_name='blog/index.html')
 
 def lotto_numbers(request):
     html_list = []
