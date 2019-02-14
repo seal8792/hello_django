@@ -1,4 +1,4 @@
 django~=2.1.0
 gunicorn
 requests
-beautifulsoup4
+beautifulsoup4              # heroku push 당시 필요 사항 지정
