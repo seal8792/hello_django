@@ -85,3 +85,7 @@ def lotto_numbers(request):
         html = "<br>\n<html><body> Suggestion No.{} : %s </body></html>".format(i) % lotto_list
         html_list.append(html)
     return HttpResponse(html_list)
+
+def hi_lo(request):
+    pass
+    
