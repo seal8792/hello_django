@@ -61,11 +61,11 @@ def 사원증_이미지_응답(request):
     ttf_path = 'C:/Windows/Fonts/malgun.ttf' # 윈도우, 맥:
     # ttf_path = '/Library/Fonts/AppleGothic.ttf'
 
-    # FIXME: 각 운영체제에 맞게 경로를 설정해주세요.
+    # 각 운영체제에 맞게 경로를 설정해주세요.
     # 파일을 복사한 후에, 경로 확인 후에 적용해주세요.
-    ttf_path = 'assets/fonts/AppleGothic.ttf'
+    # ttf_path = 'assets/fonts/AppleGothic.ttf'
 
-    text = request.GET.get('name', 'KERBY')
+    text = request.GET.get('name', 'KERBY / 010-5297-1456')
     # text = '이진석 (사번: 201900001)'
 
     image_url = 'http://www.flowermeaning.com/flower-pics/Calla-Lily-Meaning.jpg'
