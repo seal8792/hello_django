@@ -13,6 +13,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
     author_name = models.CharField(max_length=100, db_index=True) # db_index : 필요한 필드에만 적용(migrate 필수)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
