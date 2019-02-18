@@ -12,5 +12,5 @@ class PostAdmin(admin.ModelAdmin):
         return post.content[:20] + '...'
 
 @admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
+class ItemAdmin(admin.ModelAdmin):
     pass
