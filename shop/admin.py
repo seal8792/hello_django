@@ -13,5 +13,8 @@ class ShopAdmin(admin.ModelAdmin):
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'desc', 'price', 'is_public']
-    list_display_link = ['name', 'price']
+    list_display_links = ['name']
     search_fields = ['name']
+
+    def desc(self, post):
+        return post.content[:20] + '...'
