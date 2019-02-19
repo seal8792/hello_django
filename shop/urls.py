@@ -7,5 +7,4 @@ app_name = 'shop'
 urlpatterns = [
     path('', views.index),
     path('<int:pk>/', views.shop_detail),
-
 ]

@@ -7,3 +7,10 @@ def index(request):
     return render(request, 'shop/shop_list.html', {
         'shop_list':qs,
         })
+
+def shop_detail(request, pk):
+    shop = Shop.objects.get(pk=pk)
+    return render(request, 'shop/shop_detail.hkml', {
+        'shop' : shop,
+    })
+ 
