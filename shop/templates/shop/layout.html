@@ -11,7 +11,7 @@
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <h5 class="my-0 mr-md-auto font-weight-normal">
-            SK텔링크 맛집 지도
+            SK텔링크 근처 맛집 지도
         </h5>
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark" href="/blog/">blog</a>
@@ -19,17 +19,16 @@
         </nav>
         <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
-{% extends "shop/layout.html" %}
 
-{% block content %}
+    {% block content %}
+    {% endblock %}
+
     <div class="container">
-        <div class="card-group">
-            {% for shop in shop_list %}
-@@ -53,6 +34,4 @@ <h5 class="card-title">
-            {% endfor %}
+        <div class="col-sm-12">
+            <hr/>
+            &copy; 2019. SK텔링크
         </div>
     </div>
 
 </body>
 </html>
-{% endblock %}
