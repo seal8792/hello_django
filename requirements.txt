@@ -3,3 +3,6 @@ gunicorn
 beautifulsoup4
 requests
 pillow
+django-debug-toolbar
+
+django-heroku
